@@ -46,6 +46,20 @@ const BookList = () => {
 
   return (
     <>
+      <Typography variant='button' fontSize={22}>
+        popular Book of the library
+      </Typography>
+      <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+        <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+        <TextField
+          id='input-with-sx'
+          label='search book..'
+          type='search'
+          variant='standard'
+          sx={{ textAlign: 'center' }}
+          onChange={handleSearch}
+        />
+      </Box>
       {book.length > 0 ? (
         <>
           <Box
@@ -59,22 +73,7 @@ const BookList = () => {
               backgroundColor: 'white',
               boxShadow: '0px 1px 3px 0 rgba(0,0,0,0.2)',
             }}
-          >
-            <Typography variant='button' fontSize={22}>
-              popular Book of the library
-            </Typography>
-            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-              <SearchIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-              <TextField
-                id='input-with-sx'
-                label='search book..'
-                type='search'
-                variant='standard'
-                sx={{ textAlign: 'center' }}
-                onChange={handleSearch}
-              />
-            </Box>
-          </Box>
+          ></Box>
 
           <Grid container spacing={2} rowSpacing={3}>
             {book.map((item) => {

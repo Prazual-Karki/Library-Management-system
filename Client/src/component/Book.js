@@ -9,7 +9,7 @@ import noPhoto from '../assets/noPhoto.jpg'
 import { BASE_URL } from './helper'
 
 export default function Book(props) {
-  var photoName = props.data.photo.replace('public\\', '')
+  var photoName = props.data.photo.replace('public/', '')
   photoName = `${BASE_URL}/${photoName}`
 
   return (

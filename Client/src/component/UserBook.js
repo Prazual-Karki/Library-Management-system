@@ -10,7 +10,7 @@ import axios from 'axios'
 import { BASE_URL } from './helper'
 
 export default function UserBook(props) {
-  var photoName = props.data.photo.replace('public\\', '')
+  var photoName = props.data.photo.replace('public/', '')
   photoName = `${BASE_URL}/${photoName}`
 
   const handleDelete = async (id) => {

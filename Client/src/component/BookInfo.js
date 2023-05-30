@@ -44,12 +44,10 @@ export default function BookInfo() {
         }
       )
       .then((res) => {
-        console.log(res.data)
         setbookInfo(res.data)
-        // console.log(userDetails)
 
         if (res.data.photo) {
-          var photoName = res.data.photo.replace('public\\', '')
+          var photoName = res.data.photo.replace('public/', '')
           photoName = `${BASE_URL}/${photoName}`
           setbookPhoto(photoName)
         }

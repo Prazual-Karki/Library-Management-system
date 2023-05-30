@@ -54,7 +54,7 @@ export default function UpdateBook() {
         setbookInfo(res.data)
 
         if (res.data.photo) {
-          var photoName = res.data.photo.replace('public\\', '')
+          var photoName = res.data.photo.replace('public/', '')
           photoName = `${BASE_URL}/${photoName}`
           setprofilePic(photoName)
         }
