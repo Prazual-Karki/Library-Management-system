@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 app.use('/', Routes)
 
-//static files
+//static files for production
 app.use(express.static(path.join(__dirname, './Client/build')))
 
 app.get('*', (req, res) => {

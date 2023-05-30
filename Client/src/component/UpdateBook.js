@@ -77,9 +77,6 @@ export default function UpdateBook() {
       ...bookInfo,
       [name]: value,
     })
-
-    // var src = URL.createObjectURL(event.target.files[0]);
-    // imgRef.current.src = src;
   }
   const handleSubmit = async (event) => {
     event.preventDefault()
